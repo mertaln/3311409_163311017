@@ -1,34 +1,26 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:flutter_application_4/components/bottomNavigation.dart';
 import 'package:flutter_application_4/components/laptop.dart';
+import 'package:flutter_application_4/macbook.dart';
 import 'package:flutter_application_4/productDetail.dart';
 import 'components/header.dart';
+import 'package:flutter_application_4/applewatch.dart';
 
-class CategoryPage extends StatelessWidget {
+class BestSeller extends StatelessWidget {
   String categoryTitle;
 
-  CategoryPage(this.categoryTitle);
+  BestSeller(this.categoryTitle);
 
   List<Map> products = [
     {
-      "isim": "Monster Laptop",
-      "fotograf": "assets/images/laptop.jpg",
-      "fiyat": "12999"
-    },
-    {
-      "isim": "iPhone 13 Pro",
-      "fotograf": "assets/images/iphone.jpg",
-      "fiyat": "19999"
+      "isim": "Apple Watch",
+      "fotograf": "assets/images/watch.jpg",
+      "fiyat": "2699"
     },
     {
       "isim": "Macbook",
       "fotograf": "assets/images/macbook.jpg",
-      "fiyat": "9999"
-    },
-    {
-      "isim": "Android Telefon",
-      "fotograf": "assets/images/telefon.jpg",
-      "fiyat": "9999"
+      "fiyat": "17999"
     },
   ];
   @override
@@ -67,13 +59,13 @@ class CategoryPage extends StatelessWidget {
 Widget buildContent(String title, String photoUrl, String price, context) {
   return GestureDetector(
     onTap: () {
-      if (photoUrl == "assets/images/laptop.jpg") {
+      if (photoUrl == "assets/images/macbook.jpg") {
         Navigator.push(context!, MaterialPageRoute(builder: (context) {
-          return LaptopPage("Bilgisayar");
+          return MacbookPage("Macbook");
         }));
       } else {
         Navigator.push(context!, MaterialPageRoute(builder: (context) {
-          return ProductDetailPage(title);
+          return ApplePage("AppleWatch");
         }));
       }
     },

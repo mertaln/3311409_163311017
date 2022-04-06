@@ -4,31 +4,16 @@ import 'package:flutter_application_4/components/laptop.dart';
 import 'package:flutter_application_4/productDetail.dart';
 import 'components/header.dart';
 
-class CategoryPage extends StatelessWidget {
+class FavouritePage extends StatelessWidget {
   String categoryTitle;
 
-  CategoryPage(this.categoryTitle);
+  FavouritePage(this.categoryTitle);
 
   List<Map> products = [
     {
-      "isim": "Monster Laptop",
-      "fotograf": "assets/images/laptop.jpg",
-      "fiyat": "12999"
-    },
-    {
-      "isim": "iPhone 13 Pro",
-      "fotograf": "assets/images/iphone.jpg",
-      "fiyat": "19999"
-    },
-    {
-      "isim": "Macbook",
-      "fotograf": "assets/images/macbook.jpg",
-      "fiyat": "9999"
-    },
-    {
-      "isim": "Android Telefon",
-      "fotograf": "assets/images/telefon.jpg",
-      "fiyat": "9999"
+      "isim": "Apple Watch",
+      "fotograf": "assets/images/watch.jpg",
+      "fiyat": "2699"
     },
   ];
   @override

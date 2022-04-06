@@ -1,7 +1,10 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:flutter_application_4/bestseller.dart';
 import 'package:flutter_application_4/categories.dart';
 import 'package:flutter_application_4/components/bottomNavigation.dart';
 import 'package:flutter_application_4/components/label.dart';
+import 'package:flutter_application_4/favourites.dart';
+import 'package:flutter_application_4/gift.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -36,13 +39,25 @@ class _HomePageState extends State<HomePage> {
                         icon: Icons.menu,
                         widget: CategoriesPage(),
                         context: context),
-                    buildNavigation(text: "Favoriler", icon: Icons.star_border),
                     buildNavigation(
-                        text: "Hediyeler", icon: Icons.card_giftcard),
-                    buildNavigation(text: "Çok Satanlar", icon: Icons.people),
+                        text: "Favoriler",
+                        icon: Icons.star_border,
+                        widget: FavouritePage("Favoriler"),
+                        context: context),
+                    buildNavigation(
+                        text: "Hediyeler",
+                        icon: Icons.card_giftcard,
+                        widget: CategoriesGift("Hediyeler"),
+                        context: context),
+                    buildNavigation(
+                        text: "Çok Satanlar",
+                        icon: Icons.people,
+                        widget: BestSeller("Çok Satanlar"),
+                        context: context),
                   ],
                 ),
               ),
+
               //İndirimler
 
               SizedBox(height: 40),
