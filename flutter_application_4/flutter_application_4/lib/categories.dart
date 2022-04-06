@@ -7,9 +7,7 @@ class CategoriesPage extends StatelessWidget {
   final List<String> categories = [
     'Hepsi',
     'Bilgisayarlar',
-    "Aksesuarlar",
     "Akıllı Telefonlar",
-    "Küçük Aletler",
     "Hoparlörler",
   ];
 
@@ -25,6 +23,7 @@ class CategoriesPage extends StatelessWidget {
           header("Kategoriler", context),
 
           SizedBox(height: 16),
+
           //Kategoriler
           Expanded(
             child: ListView(

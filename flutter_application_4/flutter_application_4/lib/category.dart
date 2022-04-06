@@ -10,28 +10,23 @@ class CategoryPage extends StatelessWidget {
 
   List<Map> products = [
     {
-      "isim": "Surface laptop 3",
+      "isim": "Monster Laptop",
       "fotograf": "assets/images/laptop.jpg",
-      "fiyat": "9999"
+      "fiyat": "12999"
     },
     {
       "isim": "iPhone 13 Pro",
-      "fotograf": "assets/images/laptop.jpg",
-      "fiyat": "9999"
+      "fotograf": "assets/images/iphone.jpg",
+      "fiyat": "19999"
     },
     {
       "isim": "Macbook",
-      "fotograf": "assets/images/laptop.jpg",
+      "fotograf": "assets/images/macbook.jpg",
       "fiyat": "9999"
     },
     {
-      "isim": "Macbook",
-      "fotograf": "assets/images/laptop.jpg",
-      "fiyat": "9999"
-    },
-    {
-      "isim": "Macbook",
-      "fotograf": "assets/images/laptop.jpg",
+      "isim": "Android Telefon",
+      "fotograf": "assets/images/telefon.jpg",
       "fiyat": "9999"
     },
   ];
@@ -50,8 +45,8 @@ class CategoryPage extends StatelessWidget {
           //içerikler
           Expanded(
             child: GridView.count(
-              crossAxisCount: 2,
-              mainAxisSpacing: 15,
+              crossAxisCount: 1,
+              mainAxisSpacing: 10,
               crossAxisSpacing: 10,
               children: products.map((Map product) {
                 return buildContent(product["isim"], product["fotograf"],
@@ -93,18 +88,19 @@ Widget buildContent(String title, String photoUrl, String price, context) {
           Image.asset(photoUrl),
           SizedBox(height: 10),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(title,
                   style: TextStyle(
                       color: Color(0xFF0A1034),
-                      fontSize: 12,
+                      fontSize: 22,
                       fontWeight: FontWeight.w500)),
               Text("$price TL",
                   style: TextStyle(
-                      color: Color(0xFF0001FC),
-                      fontSize: 8,
-                      fontWeight: FontWeight.w500)),
+                    color: Color(0xFF0001FC),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  )),
             ],
           ),
         ],

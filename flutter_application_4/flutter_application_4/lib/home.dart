@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
               buildBanner(),
               //Butonlar
               Padding(
-                padding: EdgeInsets.only(top: 48),
+                padding: EdgeInsets.only(top: 36),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -47,6 +47,7 @@ class _HomePageState extends State<HomePage> {
 
               SizedBox(height: 40),
               Text(
+                textAlign: TextAlign.center,
                 "İndirimler",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -54,6 +55,7 @@ class _HomePageState extends State<HomePage> {
                     color: Color(0xFF0A1034)),
               ),
               SizedBox(height: 16),
+
               // Akıllı telefon resmi
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -65,27 +67,9 @@ class _HomePageState extends State<HomePage> {
                     screenWidth: screenWidth,
                   ),
                   buildIndirimler(
-                    text: "Akıllı Telefonlar",
-                    photoUrl: "assets/images/telefon.jpg",
-                    discount: "-%50",
-                    screenWidth: screenWidth,
-                  ),
-                ],
-              ),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  buildIndirimler(
-                    text: "Akıllı Telefonlar",
-                    photoUrl: "assets/images/telefon.jpg",
-                    discount: "-%50",
-                    screenWidth: screenWidth,
-                  ),
-                  buildIndirimler(
-                    text: "Akıllı Telefonlar",
-                    photoUrl: "assets/images/telefon.jpg",
-                    discount: "-%50",
+                    text: "Laptoplar",
+                    photoUrl: "assets/images/laptop.jpg",
+                    discount: "-%20",
                     screenWidth: screenWidth,
                   ),
                 ],
@@ -104,9 +88,10 @@ Widget buildBaslik() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 16.0),
     child: Text(
-      "Home",
+      textAlign: TextAlign.center,
+      "Ana Ekran",
       style: TextStyle(
-          fontSize: 32, color: Color(0xFF0A1034), fontWeight: FontWeight.bold),
+          fontSize: 32, color: Color(0xFF0A1038), fontWeight: FontWeight.bold),
     ),
   );
 }
