@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_4/home.dart';
+import 'package:flutter_application_4/posts.dart';
 
 import 'kayit.dart';
 
@@ -190,6 +191,35 @@ class _GirisState extends State<Giris> {
                             color: Color(0xFFffffff)),
                         child: Text(
                           "Kayıt Oluştur",
+                          style: const TextStyle(
+                            color: Color(0xFF1B383A),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                          ).copyWith(color: const Color(0xff045C74)),
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        /*   Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    AuthenticationRegister())); */
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PostsPage()));
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: MediaQuery.of(context).size.height * 0.08,
+                        width: MediaQuery.of(context).size.width / 2.5,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            color: Color(0xFFffffff)),
+                        child: Text(
+                          "İletişim",
                           style: const TextStyle(
                             color: Color(0xFF1B383A),
                             fontSize: 18,
