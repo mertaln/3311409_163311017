@@ -128,7 +128,7 @@ Widget buildBanner() {
               "Speaker",
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 24,
+                  fontSize: 18,
                   fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 8),
